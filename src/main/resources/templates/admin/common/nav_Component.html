@@ -1,0 +1,59 @@
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<div class="navbar-default navbar-static-side" role="navigation" th:fragment="nav">
+    <div class="nav-close"><i class="fa fa-times-circle"></i>
+    </div>
+    <div class="sidebar-collapse">
+        <ul class="nav" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear">
+                                    <span class="block m-t-xs" style="font-size:20px;">
+                                        <i class="fa fa-area-chart"></i>
+                                        <strong class="font-bold">软协博客后台</strong>
+                                    </span>
+                                </span>
+                    </a>
+                </div>
+                <div class="logo-element">
+                </div>
+            </li>
+            <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                <span class="ng-scope">首页</span>
+            </li>
+            <li>
+                <a class="J_menuItem" th:href="@{/admin/toindex}">
+                    <i class="fa fa-home"></i>
+                    <span class="nav-label">首页</span>
+                </a>
+            </li>
+            <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                <span class="ng-scope">用户管理</span>
+            </li>
+            <li>
+                <a class="J_menuItem" th:href="@{/admin/toUserAdmin}">
+                    <i class="fa fa-home"></i>
+                    <span class="nav-label">用户列表</span>
+                </a>
+            </li>
+            <li class="line dk"></li>
+            <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                <span class="ng-scope">软协博客管理</span>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-envelope"></i> <span class="nav-label">博客主页管理 </span></a>
+                <ul class="nav nav-second-level">
+                    <li><a class="J_menuItem" th:href="@{/admin/toBlogsSet}">发布公告</a>
+                    </li>
+                    <li><a class="J_menuItem" th:href="@{/admin/toBlogs}">文章审核</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+</html>
